@@ -1,9 +1,9 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import ArtworkItem from "./ArtworkItem";
 import { useRouter, useSearchParams } from "next/navigation";
 import artworksData from "../../data/artworksData";
-import './styles.css'
+import './styles.css';
 
 const ITEMS_PER_PAGE = 4;
 
@@ -54,4 +54,10 @@ const ProjectsSection = () => {
   );
 };
 
-export default ProjectsSection;
+const SuspendedProjectsSection = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <ProjectsSection />
+  </Suspense>
+);
+
+export default SuspendedProjectsSection;
