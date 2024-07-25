@@ -1,6 +1,4 @@
 import HeroSection from "./components/HomePage/HeroSection";
-import AchievementsSection from "./components/HomePage/AchievementsSection";
-import LatestProjects from "./components/LatestProjects/LatestProjects";
 
 
 export const metadata = {
@@ -14,7 +12,6 @@ export default function Home() {
       <div className="container mt-16 mx-auto">
         <HeroSection />
         {/* <AchievementsSection /> */}
-        <LatestProjects />
       </div>
   );
 }
